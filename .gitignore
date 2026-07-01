@@ -1,0 +1,6 @@
+dist
+node_modules
+src/db/meta
+src/db/*.sql
+.env
+.nvmrc

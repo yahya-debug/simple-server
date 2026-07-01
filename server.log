@@ -1,0 +1,5 @@
+
+> fully_fledged_server@1.0.0 dev
+> npx tsc && node dist/index.js
+
+Hey
