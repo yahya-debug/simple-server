@@ -1,3 +1,6 @@
+// ============================================================
+// Drizzle DB client setup + automatic migrations on startup.
+// ============================================================
 import postgres from "postgres";
 import { config } from "../config.js";
 import { drizzle } from "drizzle-orm/postgres-js";
@@ -8,6 +11,7 @@ const migrationConfig: MigrationConfig = {
   migrationsFolder: "./src/db",
 };
 import { migrate } from "drizzle-orm/postgres-js/migrator";
+// Main app connection, used by every query in db/queries/*.
 const conn = postgres(config.DB_URL);
 export const db = drizzle(conn, { schema: schema })
 
